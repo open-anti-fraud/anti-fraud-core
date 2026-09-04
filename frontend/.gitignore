@@ -1,0 +1,15 @@
+docs
+build
+dist
+.husky
+.idea
+/report/
+/.jscpd
+.vscode
+*.DS_Store
+node_modules
+.vite
+/src/fingerprint
+/tdvc-face-onboarding-*.tgz
+external_project_with_web-component/certs
+external_project_with_web-component/public

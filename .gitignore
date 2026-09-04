@@ -1,0 +1,38 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+secrets/
+credentials/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+dump.bin
+ipc_worker/
+
+# JavaScript and build artifacts
+node_modules/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+*.tgz
+
+# Tooling and operating systems
+.idea/
+.vscode/
+.DS_Store
+*.log

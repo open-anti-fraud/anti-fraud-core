@@ -1,0 +1,72 @@
+.tdvc-button {
+    width: 100%;
+    min-width: var(--sizes-12);
+    height: var(--sizes-12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+
+    appearance: none;
+    user-select: none;
+
+    position: relative;
+
+    font-size: var(--fontSizes-lg);
+    font-weight: var(--fontWeights-semibold);
+    line-height: 1.2;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    color: var(--colors-gray-800);
+
+    transition-property: var(--transition-property-common);
+    transition-duration: var(--transition-duration-normal);
+
+    padding-inline-start: var(--space-6);
+    padding-inline-end: var(--space-6);
+
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-color: var(--colors-gray-200);
+    border-radius: var(--radii-md);
+
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+
+    cursor: pointer;
+}
+
+.tdvc-button:hover:not(:disabled) {
+    background: var(--colors-gray-100);
+}
+
+.tdvc-button[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: var(--shadows-none);
+    cursor: not-allowed;
+}
+
+.tdvc-button_loading::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid black;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,8 @@
+.tdvc-validation-flow-verdict {
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.5;
+    font-family: var(--fonts-heading);
+}

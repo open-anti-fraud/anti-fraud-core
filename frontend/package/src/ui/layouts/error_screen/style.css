@@ -1,0 +1,11 @@
+.tdvc-error {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tdvc-error__error-message {
+    text-align: center;
+}

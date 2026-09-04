@@ -1,0 +1,7 @@
+.tdvc-flow-description-text {
+    line-height: 1.5;
+    text-align: center;
+    overflow-y: auto;
+    max-height: 25dvh;
+    padding-inline: 24px;
+}

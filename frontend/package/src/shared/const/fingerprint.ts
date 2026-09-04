@@ -1,0 +1,1 @@
+export const DEFAULT_FINGERPRINT_WAIT_TIME: number = 2000;

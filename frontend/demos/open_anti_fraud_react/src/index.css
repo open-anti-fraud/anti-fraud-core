@@ -1,0 +1,50 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+:root {
+	--background-primary-color: #efefef;
+	--background-secondary-color: #ffffff;
+
+	--background-hover-color: #fafafa;
+	--background-active-color: #f6f6f6;
+
+	--border-color: #e1e1e1;
+
+	--accent-contrast-color: white;
+	--accent-color: #3dafcf;
+	--accent-hover-color: #3597b3;
+	--accent--active-color: #297286;
+}
+
+.modal-overflow {
+	z-index: 1000;
+}
+
+@media screen and (max-width: 640px) {
+	.page__title {
+		font-size: 24px;
+	}
+
+	.logout-button-position-wrapper {
+		position: fixed;
+		right: 16px;
+		top: 24px;
+	}
+
+	.logout-button-position-wrapper button {
+		height: 36px;
+	}
+
+	.container {
+		width: 100%;
+        flex-grow: 1;
+	}
+
+	.modal-overflow {
+		padding: 0;
+	}
+}

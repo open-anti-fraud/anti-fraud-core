@@ -1,0 +1,84 @@
+.tdvc-form-field {
+    width: 100%;
+    position: relative;
+}
+
+.tdvc-form-field:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.tdvc-form-field__label {
+    cursor: pointer;
+    display: block;
+    text-align: start;
+    font-size: var(--fontSizes-md);
+    margin-inline-end: var(--space-3);
+    margin-bottom: var(--space-2);
+    font-weight: var(--fontWeights-medium);
+    transition-property: var(--transition-property-common);
+    transition-duration: var(--transition-duration-normal);
+    opacity: 1;
+}
+
+.tdvc-form-field__input-wrapper {
+    width: 100%;
+    display: flex;
+    position: relative;
+    isolation: isolate;
+    --input-font-size: var(--fontSizes-md);
+    --input-padding: var(--space-4);
+    --input-border-radius: var(--radii-md);
+    --input-height: var(--sizes-10);
+}
+
+.tdvc-form-field__icon {
+    left: 0px;
+    width: var(--sizes-12);
+    height: var(--sizes-12);
+    font-size: var(--fontSizes-lg);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.tdvc-form-field__input {
+    width: 100%;
+    min-width: 0px;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    position: relative;
+    transition-property: var(--transition-property-common);
+    transition-duration: var(--transition-duration-normal);
+    font-size: var(--fontSizes-lg);
+    padding-inline-start: var(--space-4);
+    padding-inline-end: var(--space-4);
+    height: var(--sizes-12);
+    border-radius: var(--radii-md);
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-color: inherit;
+    background: inherit;
+}
+
+.tdvc-form-field__input[aria-invalid='true'] {
+    border-color: rgb(229, 62, 62);
+    box-shadow: rgb(229, 62, 62) 0px 0px 0px 1px;
+}
+
+.tdvc-form-field__error-message {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: var(--colors-red-500);
+    margin-top: var(--space-2);
+    font-size: var(--fontSizes-sm);
+    line-height: var(--lineHeights-normal);
+    height: 18px;
+}

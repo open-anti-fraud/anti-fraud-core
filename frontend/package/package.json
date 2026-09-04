@@ -1,0 +1,52 @@
+{
+    "name": "@tdvc/face-onboarding",
+    "version": "0.0.1",
+    "type": "module",
+    "main": "dist/onboarding.js",
+    "types": "dist/types/src/onboarding.d.ts",
+    "module": "dist/onboarding.js",
+    "typings": "dist/types/src/onboarding.d.ts",
+    "files": [
+        "dist",
+        "public"
+    ],
+    "scripts": {
+        "dev": "vite",
+        "test": "vitest",
+        "build": "vite build --mode production && tsc",
+        "pack": "rm -rfv dist ./tdvc-face-onboarding-0.0.1.tgz && npm run build && npm pack",
+        "dev-build": "vite build --mode development && tsc",
+        "dev-pack": "rm -rfv dist ./tdvc-face-onboarding-0.0.1.tgz && npm run dev-build && npm pack",
+        "eslint": "eslint src/ --ext .js,.jsx,.ts,.tsx "
+    },
+    "dependencies": {
+        "@mediapipe/tasks-vision": "1.0.1",
+        "axios": "1.19.0",
+        "tdvc": "file:tdvc-0.0.1.tgz",
+        "yup": "1.7.0"
+    },
+    "devDependencies": {
+        "@testing-library/dom": "10.4.1",
+        "@testing-library/jest-dom": "7.0.1",
+        "@testing-library/user-event": "14.6.6",
+        "@types/node": "^26.3.0",
+        "@types/service-worker-mock": "2.0.4",
+        "@typescript-eslint/eslint-plugin": "8.68.0",
+        "@typescript-eslint/parser": "8.68.0",
+        "@vitejs/plugin-basic-ssl": "2.3.0",
+        "@vitest/ui": "4.1.11",
+        "eslint": "^9.39.5",
+        "eslint-config-prettier": "10.1.8",
+        "eslint-plugin-import": "2.32.0",
+        "eslint-plugin-prettier": "5.5.6",
+        "msw": "2.15.0",
+        "prettier": "3.9.6",
+        "typescript": "6.0.3",
+        "vitest": "4.1.11"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ]
+}

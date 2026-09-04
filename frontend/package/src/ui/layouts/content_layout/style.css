@@ -1,0 +1,15 @@
+.tdvc-content__header {
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.tdvc-content__body {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.tdvc-content__footer {
+    text-align: center;
+    margin-top: 4px;
+}

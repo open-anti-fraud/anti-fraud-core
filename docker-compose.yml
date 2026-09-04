@@ -1,0 +1,28 @@
+services:
+  video-recorder:
+    image: open-anti-fraud/video-recorder:local
+    build:
+      context: src/
+      dockerfile: Dockerfile
+    env_file: ".env"
+    depends_on:
+      - minio
+      - postgres
+  front:
+    image: nginx:alpine
+    volumes:
+      - ./src/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+  minio:
+    image: minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      - MINIO_ROOT_USER=${S3_ACCESS_KEY:?Set S3_ACCESS_KEY in .env}
+      - MINIO_ROOT_PASSWORD=${S3_SECRET_KEY:?Set S3_SECRET_KEY in .env}
+  postgres:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:?Set POSTGRES_USER in .env}
+      - POSTGRES_DB=${POSTGRES_DB:?Set POSTGRES_DB in .env}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}

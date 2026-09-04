@@ -1,0 +1,19 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "extends": ["plugin:@typescript-eslint/eslint-recommended", "plugin:@typescript-eslint/recommended"],
+    "plugins": ["@typescript-eslint"],
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "linebreak-style": 0,
+        "@typescript-eslint/ban-ts-comment": 0,
+        "no-underscore-dangle": 0,
+        "import/no-cycle": 0,
+        "comma-dangle": "off",
+        "@typescript-eslint/comma-dangle": "off",
+        "operator-linebreak": "off",
+        "@typescript-eslint/operator-linebreak": "off"
+    }
+}

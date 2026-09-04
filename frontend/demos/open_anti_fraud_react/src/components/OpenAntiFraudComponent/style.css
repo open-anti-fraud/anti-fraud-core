@@ -1,0 +1,222 @@
+.modal-overflow {
+	width: 100vw;
+	height: 100dvh;
+
+	background-color: rgba(0, 0, 0, 0.7);
+
+	position: fixed;
+	left: 0;
+	top: 0;
+
+	padding: 24px;
+	z-index: 1000;
+}
+
+#component-app {
+	width: 720px;
+}
+
+.tdvc-base-content {
+	width: 100%;
+	min-height: 580px;
+}
+
+.tdvc-base-content__header {
+	display: none;
+}
+
+.tdvc-base-content__body:has(.tdvc-camera-preview) + .tdvc-base-content__footer {
+	display: none;
+}
+
+.tdvc-base-content__body:has(.tdvc-camera-selector) + .tdvc-base-content__footer {
+	display: block;
+}
+
+.tdvc-flow-description__heading {
+	font-size: 24px;
+}
+
+@media screen and (max-width: 640px) {
+	#component-app {
+		width: 100vw;
+		height: 100dvh;
+	}
+
+	#component-app .tdvc-content {
+		height: 100%;
+
+	}
+
+	#component-app .tdvc-base-content {
+		height: 100%;
+		padding: 0;
+		gap: 0;
+	}
+
+	#component-app .tdvc-base-content__header {
+		padding: 16px 24px;
+	}
+
+	#component-app .tdvc-base-content__body {
+		height: 100%;
+	}
+
+	#component-app .tdvc-content__body {
+		height: 100%;
+	}
+
+	#component-app .tdvc-camera-preview {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+
+	#component-app .tdvc-content {
+		position: relative;
+	}
+
+	#component-app .tdvc-content__footer {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		margin-top: 0;
+	}
+
+	.tdvc-identify-applicant-form {
+		padding-inline: 24px;
+	}
+
+	#component-app .tdvc-motion-control-image-hint {
+		top: 16px;
+		left: 50%;
+		transform: translate(-50%) scale(-1, 1);
+		border-radius: 4px;
+		border: 1px solid #f1f1f1;
+		width: 100px;
+		height: 100px;
+	}
+
+	#component-app .tdvc-error {
+		width: 100%;
+		height: 100%;
+	}
+
+	#component-app .tdvc-error__error-message {
+		font-size: 20px;
+	}
+
+	#component-app .tdvc-button {
+		border-radius: 0;
+	}
+
+    #component-app .tdvc-flow-description-heading {
+        margin-top: 24px;
+	}
+
+    #component-app .tdvc-flow-description-text {
+		max-height: none;
+	}
+
+   #component-app .tdvc-content__footer {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		margin-top: 0;
+	}
+
+    #component-app .tdvc-content__header:not() {
+        display: none;
+    }
+}
+
+.tdvc-base-content__body {
+	flex-grow: 1;
+}
+
+/*
+@media screen and (max-width: 640px) {
+	#component-app {
+		width: 100vw;
+		height: 100dvh;
+		overflow: hidden;
+	}
+
+	#component-app .tdvc-content {
+		height: 100%;
+	}
+
+	#component-app:has(.tdvc-error) .tdvc-content {
+		height: auto;
+	}
+
+	#component-app .tdvc-base-content {
+		height: 100%;
+		padding-top: 24px;
+		gap: 0;
+	}
+
+	#component-app .tdvc-base-content__header {
+		padding: 16px 24px;
+	}
+
+	#component-app .tdvc-base-content__body {
+		height: 100%;
+	}
+
+	#component-app .tdvc-content__body {
+		height: 100%;
+	}
+
+	#component-app .tdvc-camera-preview {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+
+	#component-app .tdvc-content {
+		position: relative;
+	}
+
+	#component-app .tdvc-content__footer {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		margin-top: 0;
+	}
+
+	#component-app .tdvc-identify-component-applicant-form {
+		padding-inline: 24px;
+	}
+
+	#component-app .tdvc-motion-control-image-hint {
+		top: 16px;
+		left: 50%;
+		transform: translate(-50%) scale(-1, 1);
+		border-radius: 4px;
+		border: 1px solid #f1f1f1;
+		width: 100px;
+		height: 100px;
+	}
+
+	#component-app .tdvc-error {
+		width: 100%;
+		height: 100%;
+	}
+
+	#component-app .tdvc-flow-description-text {
+		max-height: none;
+        margin-top: 24px;
+	}
+
+	#component-app .tdvc-error__error-message {
+		font-size: 20px;
+	}
+
+	#component-app .tdvc-button {
+		border-radius: 0;
+	}
+}

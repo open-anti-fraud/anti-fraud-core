@@ -1,0 +1,6 @@
+.tdvc-page-heading {
+    font-size: var(--fontSizes-4xl);
+    line-height: 1.2;
+    font-family: var(--fonts-heading);
+    font-weight: var(--fontWeights-bold);
+}

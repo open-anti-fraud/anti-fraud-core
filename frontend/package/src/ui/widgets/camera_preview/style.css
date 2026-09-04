@@ -1,0 +1,10 @@
+.tdvc-camera-preview {
+    width: 100%;
+    transition: all 0.2s;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.tdvc-camera-preview::-webkit-media-controls {
+    display: none !important;
+}

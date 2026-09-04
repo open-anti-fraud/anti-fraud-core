@@ -1,0 +1,34 @@
+.tdvc-camera-selector {
+    padding-inline-end: var(--space-8);
+    width: 100%;
+    height: var(--input-height);
+    font-size: var(--input-font-size);
+    padding-inline-start: var(--input-padding);
+    border-radius: var(--input-border-radius);
+    min-width: 0px;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    position: relative;
+    transition-property: var(--transition-property-common);
+    transition-duration: var(--transition-duration-normal);
+    padding-bottom: 1px;
+    line-height: var(--lineHeights-normal);
+    background: inherit;
+    --select-bg: var(--colors-white);
+    --input-font-size: var(--fontSizes-md);
+    --input-padding: var(--space-4);
+    --input-border-radius: var(--radii-md);
+    --input-height: var(--sizes-10);
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-color: inherit;
+}
+
+.tdvc-camera-selector__option {
+    background: var(--select-bg);
+}
+
+.tdvc-camera-selector:disabled {
+    cursor: not-allowed;
+}

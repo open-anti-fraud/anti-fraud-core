@@ -1,0 +1,33 @@
+{
+	"name": "open-anti-fraud-demo",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"lint": "eslint .",
+		"preview": "vite preview",
+		"update-tdvc": "rm -rfv node_modules ./tdvc-0.0.1.tgz ./tdvc-face-onboarding-0.0.1.tgz package-lock.json ./public && cp -v ../../package/tdvc-face-onboarding-0.0.1.tgz ../../package/tdvc-0.0.1.tgz . && npm i && cp -rv ./node_modules/@tdvc/face-onboarding/public ."
+	},
+	"dependencies": {
+		"@tdvc/face-onboarding": "file:tdvc-face-onboarding-0.0.1.tgz",
+		"react": "^19.2.0",
+		"react-dom": "^19.2.0"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.39.1",
+		"@types/node": "^24.10.1",
+		"@types/react": "^19.2.7",
+		"@types/react-dom": "^19.2.3",
+		"@vitejs/plugin-react": "^5.1.1",
+		"eslint": "^9.39.1",
+		"eslint-plugin-react-hooks": "^7.0.1",
+		"eslint-plugin-react-refresh": "^0.4.24",
+		"globals": "^16.5.0",
+		"typescript": "~5.9.3",
+		"typescript-eslint": "^8.48.0",
+		"vite": "^7.3.1",
+		"@vitejs/plugin-basic-ssl": "^2.0.0"
+	}
+}

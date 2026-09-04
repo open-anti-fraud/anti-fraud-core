@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "strictPropertyInitialization": false,
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "allowJs": false,
+        "declaration": true,
+        "outDir": "dist",
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "ESNext",
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "emitDeclarationOnly": true,
+        "declarationDir": "dist/types",
+        "types": ["node"]
+    },
+    "include": ["src",],
+    "exclude": ["node_modules", "dist", "test", "vite.config.ts"]
+}
